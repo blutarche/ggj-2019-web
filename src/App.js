@@ -1,28 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import styled from '@emotion/styled'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import { COLOR_1 } from 'theme'
+
+import './App.css'
+
+const Container = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${COLOR_1};
+`
+const Title = styled.div`
+  font-size: 4rem;
+  font-family: 'Amatic SC', cursive;
+`
+
+const App = () => {
+  return (
+    <Container>
+      <Title>Old Man Tea Party</Title>
+    </Container>
+  )
 }
 
-export default App;
+export default App
