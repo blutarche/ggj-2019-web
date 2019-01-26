@@ -13,15 +13,48 @@ const Container = styled.div`
   justify-content: center;
   background-color: ${COLOR_1};
 `
+const GameContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+`
+const Home = styled.div`
+  padding: 2rem;
+`
 const Title = styled.div`
+  font-size: 3rem;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+`
+const TeamName = styled.div`
+  font-size: 1.4rem;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+`
+const Show = styled.div`
   font-size: 4rem;
   font-family: 'Amatic SC', cursive;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
 `
 
 const App = () => {
+  const [show, setShow] = useState(false)
   return (
     <Container>
-      <Title>Old Man Tea Party</Title>
+      <div hidden={!show}>
+        <GameContainer id="gameContainer" />
+      </div>
+      {!show && (
+        <Home>
+          <Title>Internet is Home</Title>
+          <TeamName>by Old Man Tea Party</TeamName>
+          <Show onClick={() => setShow(true)}>Play</Show>
+        </Home>
+      )}
     </Container>
   )
 }
