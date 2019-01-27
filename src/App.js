@@ -64,7 +64,7 @@ const App = () => {
   }
   return (
     <Container lightsOn={lightsOn}>
-      <Title lightsOn={lightsOn}>Super Ultimate Smart Home 4.0</Title>
+      <Title lightsOn={lightsOn}>Super Smart Home Ultimate 2019</Title>
       <Content>
         <Row>
           <Col>
