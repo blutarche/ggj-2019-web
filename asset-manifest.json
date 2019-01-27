@@ -1,13 +1,15 @@
 {
-  "main.css": "/ggj-2019-web/static/css/main.64480157.chunk.css",
-  "main.js": "/ggj-2019-web/static/js/main.ab168264.chunk.js",
-  "main.js.map": "/ggj-2019-web/static/js/main.ab168264.chunk.js.map",
-  "static/js/1.cc507814.chunk.js": "/ggj-2019-web/static/js/1.cc507814.chunk.js",
-  "static/js/1.cc507814.chunk.js.map": "/ggj-2019-web/static/js/1.cc507814.chunk.js.map",
+  "main.css": "/ggj-2019-web/static/css/main.7b444b87.chunk.css",
+  "main.js": "/ggj-2019-web/static/js/main.0881d898.chunk.js",
+  "main.js.map": "/ggj-2019-web/static/js/main.0881d898.chunk.js.map",
+  "static/js/1.7ffff24b.chunk.js": "/ggj-2019-web/static/js/1.7ffff24b.chunk.js",
+  "static/js/1.7ffff24b.chunk.js.map": "/ggj-2019-web/static/js/1.7ffff24b.chunk.js.map",
   "runtime~main.js": "/ggj-2019-web/static/js/runtime~main.500dad1e.js",
   "runtime~main.js.map": "/ggj-2019-web/static/js/runtime~main.500dad1e.js.map",
-  "static/css/main.64480157.chunk.css.map": "/ggj-2019-web/static/css/main.64480157.chunk.css.map",
+  "static/css/main.7b444b87.chunk.css.map": "/ggj-2019-web/static/css/main.7b444b87.chunk.css.map",
+  "static/media/cat1.jpg": "/ggj-2019-web/static/media/cat1.4cf1d02f.jpg",
+  "static/media/dusted.jpeg": "/ggj-2019-web/static/media/dusted.56fd9630.jpeg",
   "index.html": "/ggj-2019-web/index.html",
-  "precache-manifest.aad30b8d4ab1651a91bafaed5d10789a.js": "/ggj-2019-web/precache-manifest.aad30b8d4ab1651a91bafaed5d10789a.js",
+  "precache-manifest.c633540a91330fb6d97f3e0814b6a65f.js": "/ggj-2019-web/precache-manifest.c633540a91330fb6d97f3e0814b6a65f.js",
   "service-worker.js": "/ggj-2019-web/service-worker.js"
 }
