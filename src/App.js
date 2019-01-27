@@ -1,11 +1,17 @@
-import React, { useState } from 'react'
+/** @jsx jsx */
+import { useState } from 'react'
 import styled from '@emotion/styled'
+import { jsx } from '@emotion/core'
 
 import { COLOR_1 } from 'theme'
 
 import './App.css'
+import Home from './Home'
+import Tutorial from './Tutorial'
+import Credits from './Credits'
 
 const Container = styled.div`
+  font-family: 'Amatic SC', cursive;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -17,44 +23,36 @@ const GameContainer = styled.div`
   height: 100vh;
   width: 100vw;
 `
-const Home = styled.div`
-  padding: 2rem;
-`
-const Title = styled.div`
-  font-size: 3rem;
-  font-family: 'Amatic SC', cursive;
-  text-align: center;
-`
-const TeamName = styled.div`
-  font-size: 1.4rem;
-  font-family: 'Amatic SC', cursive;
-  text-align: center;
-`
-const Show = styled.div`
-  font-size: 4rem;
-  font-family: 'Amatic SC', cursive;
-  text-align: center;
-  text-decoration: underline;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.7;
-  }
-`
 
 const App = () => {
-  const [show, setShow] = useState(false)
+  const [showGame, setShowGame] = useState(false)
+  const [showTutorial, setShowTutorial] = useState(false)
+  function play() {
+    setShowGame(true)
+    global.UnityLoader.instantiate(
+      'gameContainer',
+      'game/Build/ggj19-01.json',
+      { onProgress: global.UnityProgress }
+    )
+  }
   return (
     <Container>
-      <div hidden={!show}>
+      <div hidden={!showGame}>
         <GameContainer id="gameContainer" />
       </div>
-      {!show && (
-        <Home>
-          <Title>Internet is Home</Title>
-          <TeamName>by Old Man Tea Party</TeamName>
-          <Show onClick={() => setShow(true)}>Play</Show>
-        </Home>
-      )}
+      {!showGame &&
+        (showTutorial ? (
+          <Tutorial
+            onBack={() => setShowTutorial(false)}
+            onPlay={() => play()}
+          />
+        ) : (
+          <Home
+            onPlay={() => play()}
+            onTutorial={() => setShowTutorial(true)}
+          />
+        ))}
+      {!showGame && <Credits />}
     </Container>
   )
 }
