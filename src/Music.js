@@ -113,8 +113,8 @@ const Comp = ({ action }) => {
       setNoAnswer(true)
       setTimeout(() => {
         setNoAnswer(false)
-      }, 2000)
-    }, 5000)
+      }, 1600)
+    }, 3600)
   }
   return (
     <Container>

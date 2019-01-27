@@ -47,8 +47,10 @@ const TroubleShooter = () => {
     setAdvanced(true)
     global.UnityLoader.instantiate(
       'gameContainer',
-      'game/Build/ggj19-01.json',
-      { onProgress: global.UnityProgress }
+      'game/Build/ggj19-build.json',
+      {
+        onProgress: global.UnityProgress
+      }
     )
   }
 
