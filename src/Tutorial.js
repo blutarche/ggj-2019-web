@@ -98,7 +98,14 @@ const Tutorial = ({ onBack, onPlay }) => {
       <Back onClick={onBack}>{'<'} Back</Back>
       {step > 1 && (
         <Previous onClick={() => setStep(step - 1)}>
-          {'<'} {step === 2 ? 'Objectives' : step === 3 ? 'Controls' : null}
+          {'<'}{' '}
+          {step === 2
+            ? 'Objectives'
+            : step === 3
+            ? 'Controls'
+            : step === 4
+            ? 'Beware'
+            : null}
         </Previous>
       )}
       <Content>
@@ -158,6 +165,34 @@ const Tutorial = ({ onBack, onPlay }) => {
           </Step>
         ) : step === 3 ? (
           <Step>
+            <Title>Beware</Title>
+            <Row>
+              <Description>
+                You will die within 60 seconds ...not really.
+              </Description>
+            </Row>
+            <Row>
+              <img
+                src="https://img.icons8.com/dusk/64/000000/processor.png"
+                alt="shoot"
+              />
+              <Label>
+                If you have at least one part your life won't go down.
+              </Label>
+            </Row>
+            <Row>
+              <img
+                src="https://img.icons8.com/dusk/64/000000/timer.png"
+                alt="shoot"
+              />
+              <Label>
+                Parts last for 60 seconds. Find new one and defeat the boss
+                quickly!
+              </Label>
+            </Row>
+          </Step>
+        ) : step === 4 ? (
+          <Step>
             <Play onClick={onPlay}>
               <img
                 src="https://img.icons8.com/wired/64/000000/play.png"
@@ -167,9 +202,16 @@ const Tutorial = ({ onBack, onPlay }) => {
           </Step>
         ) : null}
       </Content>
-      {step < 3 && (
+      {step < 4 && (
         <Next onClick={() => setStep(step + 1)}>
-          {step === 1 ? 'Controls' : step === 2 ? 'Play' : null} {'>'}
+          {step === 1
+            ? 'Controls'
+            : step === 2
+            ? 'Beware'
+            : step === 3
+            ? 'Play'
+            : null}{' '}
+          {'>'}
         </Next>
       )}
     </Container>
